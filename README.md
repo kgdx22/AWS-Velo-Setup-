@@ -25,7 +25,7 @@ A GUI needs to be configured on the SIFT workstation to access GUI-based tools l
 <br /> [![Ubuntu xRDP Tutorial](https://github.com/kgdx22/AWS-Velo-Setup-/blob/main/DO.jpg?raw=true)](https://www.digitalocean.com/community/tutorials/how-to-enable-remote-desktop-protocol-using-xrdp-on-ubuntu-22-04)
 
 
-**SIFT Setup**: Obtain the Private IP DNS name of the SIFT machine to insert in the Host Name section of PuTTY
+**SIFT Setup**: Obtain the Private IP DNS name of the SIFT machine from the EC2 resource console to insert in the Host Name section of PuTTY
 ![Screenshot 2025-06-04 200649](https://github.com/user-attachments/assets/6b4c65b6-97b3-4e07-8e23-37f404e177fd)
 <br /> *Don't forget to allow your local machine ip address through the firewall at the end of setup*
 ![awsrdpinsta](https://github.com/user-attachments/assets/d9c6a6cb-b8e5-404b-a507-4b02afbf18ae)
