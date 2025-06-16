@@ -46,22 +46,29 @@ Firewall Rule Creation      | Current Firewall State
 ![awsdskrun](https://github.com/user-attachments/assets/68b7947e-aeb5-491f-a84f-f41b30ccaea6)
 
 **These photos show proof of EZTools and Sysmon installation** - Event Viewer/Timeline Explorer
+<br /> Sysmon installation command - *sysmon -accepteula -i ./sysmonconfig-export.xml*
 ![awssysmon](https://github.com/user-attachments/assets/80ea64f6-8203-4147-aec4-79a637a4b483)
 ![awssysmon2](https://github.com/user-attachments/assets/ac6307e1-8273-4a67-8518-1d98cd3a45b6)
 
-**Velociraptor Configuration**
+**Velociraptor Configuration** - SIFT = Server|Windows = Client
+<br /> Install the latest Velociraptor on SIFT machine
+<br /> Chmod the file to enable execution: *chmod +x velociraptor-v0.72.1-linux-amd64*
+<br /> Then run the following: *./velociraptor-v0.72.1-linux-amd64 config generate -i*
+<br />
+<br /> This will initiate a wizard that will walk you through all the steps you need to generate configuration files for both the server and the client.
 <img width="959" alt="awsveloset" src="https://github.com/user-attachments/assets/9f50d931-e145-49ae-9d26-f2ac8c2771b1" />
+<br /> Copy everything but the Master Frontend. You will need to create a Self Signed SSL for Velociraptor configuration. Here is the detailed guide: https://docs.velociraptor.app/docs/deployment/quickstart/
+<br /> As you can see bind addresses will need to be changed to allow for communication to the front end.
 <img width="959" alt="awsvelbind" src="https://github.com/user-attachments/assets/8514d39f-7a70-4ac4-b361-e566f5b7b9cc" />
 <img width="947" alt="awsvelinsl" src="https://github.com/user-attachments/assets/f52e9226-d716-4eb5-a7cc-4b0ca57fbace" /> 
 
-**Velociraptor Connection**
+**Velociraptor Connection** - We have successfully connected to Velociraptor on our Server
 ![awsvelociraptor](https://github.com/user-attachments/assets/9e1bfe25-1f65-4de9-ae5a-27bc0489cf1c)
 ![awsvelss](https://github.com/user-attachments/assets/2b82b3f7-8cc0-423b-81a4-0aa8c44a8651)
+<br /> Open the server artifacts tab (shown below) and then the plus sign to open the server artifact menu. From there, search for “create” and select “Server.Utils.CreateMSI”.
+<br /> After launching and downloading this artifact, we will use Python Simple HTTP to transfer the file to our Windows Client
 ![awsvelmsi2](https://github.com/user-attachments/assets/a7163700-c718-4e9d-8c43-bfa103292c77)
-
-
-
-
+**<br /> Below is an extra sshd configuration file in the case that yours is inoperable** 
 
 ![awspspe](https://github.com/user-attachments/assets/e74bf3ec-b7be-451d-a0a9-954107b588ea)
 
