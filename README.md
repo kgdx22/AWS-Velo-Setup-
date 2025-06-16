@@ -1,36 +1,51 @@
 # AWS-Velociraptor-Setup-
 
-
+Create secure access to your AWS environment with SSO
+<br /> Choose SIFT Workstation Server - t2.medium > Repeat for a Windows Workstation
 SIFT Workstation            |  Windows Server 2016 Workstation
 :-------------------------:|:-------------------------:
 <img width="959" alt="awssiftws" src="https://github.com/user-attachments/assets/fccd4721-bb39-43b8-bff5-8bc81cf55ae6" /> |  <img width="959" alt="awswinws" src="https://github.com/user-attachments/assets/b3b4d380-3c65-4fa8-9e65-1fe8f178c556" />
 
+Create a Private RSA Key Pair for both machines 
 SIFT Key                   | Windows Key
 :-------------------------:|:-------------------------:
 <img width="500" alt="awskey" src="https://github.com/user-attachments/assets/d6efd606-c9dd-46b0-a0fe-000409ede3b8" /> | <img width="500" alt="awswkey" src="https://github.com/user-attachments/assets/15d29295-68f1-43b3-9cbf-af2b5e203327" />
 
+Adjust network settings on the SIFT machine to allow SSH from "My IP" > Adjust network settings on the Windows machine to allow RDP from "My IP"
+<br /> Edit inbound Security Group rules > "All TCP" - (Add in a CIDR range that covers the two IPs in your EC2 instances’ VPC)
+<br /> Create the necessary inbound rules as shown below allowing SSH/RDP traffic from your local device to both instances 
+<br /> **I used two different local machines in this lab, hence the extra ip address for each rule**
 SIFT WS Security Group | Windows 2016 WS Security Group
 :------------------------:|:---------------------------:
 <img width="959" alt="AWSsiftsecg" src="https://github.com/user-attachments/assets/b4c01c5d-edd1-42b2-aee3-644939def448" /> | <img width="959" alt="AWSWindSecGroup" src="https://github.com/user-attachments/assets/82b336de-3ac0-4e97-bf50-e91eb9500bcb" />
 
-**SIFT Setup**
+A GUI needs to be configured on the SIFT workstation to access GUI-based tools like Autopsy and Velociraptor
+<br /> Digital Ocean has a guide on SIFT configuration:
+<br /> [![Ubuntu xRDP Tutorial](https://github.com/kgdx22/AWS-Velo-Setup-/blob/main/DO.jpg?raw=true)](https://www.digitalocean.com/community/tutorials/how-to-enable-remote-desktop-protocol-using-xrdp-on-ubuntu-22-04)
+
+
+**SIFT Setup**: Obtain the Private IP DNS name of the SIFT machine to insert in the Host Name section of PuTTY
 ![Screenshot 2025-06-04 200649](https://github.com/user-attachments/assets/6b4c65b6-97b3-4e07-8e23-37f404e177fd)
+<br /> *Don't forget to allow your local machine ip address through the firewall at the end of setup*
 ![awsrdpinsta](https://github.com/user-attachments/assets/d9c6a6cb-b8e5-404b-a507-4b02afbf18ae)
+You may run into this error where the *sansforensics* account will not load past startup 
 ![Screenshot 2025-06-04 204135](https://github.com/user-attachments/assets/ab4cfc66-8bf7-4a87-ae8b-f16507ecdcb6)
 
-Creating user for login: 
+Head back to PuTTY and create a User account like so:
 <img width="907" alt="awsadduser" src="https://github.com/user-attachments/assets/5a61b809-b27c-4117-a12a-1e9a35f42b9c" />
-![Screenshot 2025-06-07 082130](https://github.com/user-attachments/assets/2a0d0cec-f5d3-40a2-8578-73da17e36de3)
 
+After you have successfully logged in you will be able to obtain the latest Velociraptor download
+![Screenshot 2025-06-07 082130](https://github.com/user-attachments/assets/2a0d0cec-f5d3-40a2-8578-73da17e36de3)
+Confirm your firewall state and ensure that your local machine and two instances can communicate
 Firewall Rule Creation      | Current Firewall State
 :--------------------------:|:------------------------:
 <img width="700" alt="awsinactfw" src="https://github.com/user-attachments/assets/af4d4110-58f0-4741-8efa-a7ec1aee6ae7" /> | <img width="700" alt="aws2ndufwr" src="https://github.com/user-attachments/assets/259ebd02-c1ee-40d6-9950-c1eb5f71f3c1" />
 
-**EZ Tools Installation**
+**EZ Tools Installation** - https://ericzimmerman.github.io/ (Must install .NET 6.0 prior)
 ![awseztools](https://github.com/user-attachments/assets/436a67b5-b723-4385-b774-1df6d48ddd2c)
 ![awsdskrun](https://github.com/user-attachments/assets/68b7947e-aeb5-491f-a84f-f41b30ccaea6)
 
-**Sysmon**
+**These photos show proof of EZTools and Sysmon installation** - Event Viewer/Timeline Explorer
 ![awssysmon](https://github.com/user-attachments/assets/80ea64f6-8203-4147-aec4-79a637a4b483)
 ![awssysmon2](https://github.com/user-attachments/assets/ac6307e1-8273-4a67-8518-1d98cd3a45b6)
 
