@@ -1,4 +1,4 @@
-# AWS-Velociraptor-Setup-
+# AWS-DFIR-LAB-Setup-
 
 Create secure access to your AWS environment with SSO
 <br /> Choose SIFT Workstation Server - t2.medium > Repeat for a Windows Workstation
@@ -41,7 +41,7 @@ Firewall Rule Creation      | Current Firewall State
 :--------------------------:|:------------------------:
 <img width="700" alt="awsinactfw" src="https://github.com/user-attachments/assets/af4d4110-58f0-4741-8efa-a7ec1aee6ae7" /> | <img width="700" alt="aws2ndufwr" src="https://github.com/user-attachments/assets/259ebd02-c1ee-40d6-9950-c1eb5f71f3c1" />
 
-**EZ Tools Installation** - https://ericzimmerman.github.io/ (Must install .NET 6.0 prior)
+**EZ Tools Installation** - https://ericzimmerman.github.io/ (Must install at minimum .NET 6.0 prior)
 ![awseztools](https://github.com/user-attachments/assets/436a67b5-b723-4385-b774-1df6d48ddd2c)
 ![awsdskrun](https://github.com/user-attachments/assets/68b7947e-aeb5-491f-a84f-f41b30ccaea6)
 
@@ -68,9 +68,13 @@ Firewall Rule Creation      | Current Firewall State
 <br /> Open the server artifacts tab (shown below) and then the plus sign to open the server artifact menu. From there, search for “create” and select “Server.Utils.CreateMSI”.
 <br /> After launching and downloading this artifact, we will use Python Simple HTTP to transfer the file to our Windows Client
 ![awsvelmsi2](https://github.com/user-attachments/assets/a7163700-c718-4e9d-8c43-bfa103292c77)
+<br />
 **<br /> Below is an extra sshd configuration file in the case that yours is inoperable** 
 
 ![awspspe](https://github.com/user-attachments/assets/e74bf3ec-b7be-451d-a0a9-954107b588ea)
+<br />
+*<br /> Credit: Adam Messer - Medium*
+
 
 
 
