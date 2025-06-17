@@ -7,7 +7,7 @@ SIFT Workstation            |  Windows Server 2016 Workstation
 :-------------------------:|:-------------------------:
 <img width="959" alt="awssiftws" src="https://github.com/user-attachments/assets/fccd4721-bb39-43b8-bff5-8bc81cf55ae6" /> |  <img width="959" alt="awswinws" src="https://github.com/user-attachments/assets/b3b4d380-3c65-4fa8-9e65-1fe8f178c556" />
 
-Create a Private RSA Key Pair for both machines 
+Create a Private RSA Key Pair for both machines (Select .ppk for PuTTY use)
 SIFT Key                   | Windows Key
 :-------------------------:|:-------------------------:
 <img width="500" alt="awskey" src="https://github.com/user-attachments/assets/d6efd606-c9dd-46b0-a0fe-000409ede3b8" /> | <img width="500" alt="awswkey" src="https://github.com/user-attachments/assets/15d29295-68f1-43b3-9cbf-af2b5e203327" />
