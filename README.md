@@ -2,7 +2,7 @@
 
 Create secure access to your AWS environment with SSO
 <br /> Open the EC2 resource console and select “Launch Instances.”
-<br /> Choose SIFT Workstation Server - t2.medium > Repeat annd choose Windows Server 2016 Workstation
+<br /> Choose SIFT Workstation Server - t2.medium > Repeat and choose Windows Server 2016 Workstation
 SIFT Workstation            |  Windows Server 2016 Workstation
 :-------------------------:|:-------------------------:
 <img width="959" alt="awssiftws" src="https://github.com/user-attachments/assets/fccd4721-bb39-43b8-bff5-8bc81cf55ae6" /> |  <img width="959" alt="awswinws" src="https://github.com/user-attachments/assets/b3b4d380-3c65-4fa8-9e65-1fe8f178c556" />
