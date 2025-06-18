@@ -1,6 +1,6 @@
 # AWS-DFIR-LAB-Setup-
 <br />
-This lab was built to create a scalable and cloud-based Digital Forensics and Incident Response (DFIR) environment using AWS services. By following *Adam Messer’s* guide, I was able to configure a Windows forensic workstation and deploy Velociraptor for endpoint telemetry and threat hunting. This environment serves as the foundation for simulating realistic attack scenarios, collecting forensic evidence, and developing custom detection capabilities — all within a safe and isolated cloud setting.
+This lab was built to create a scalable and cloud-based Digital Forensics and Incident Response (DFIR) environment using AWS services. I was able to configure a Windows forensic workstation and deploy Velociraptor for endpoint telemetry and threat hunting practice. This environment serves as the foundation for simulating realistic attack scenarios, collecting forensic evidence, and developing custom detection capabilities — all within a safe and isolated cloud setting.
 
 ### Necessary Tools
 
