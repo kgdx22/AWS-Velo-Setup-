@@ -1,5 +1,19 @@
 # AWS-DFIR-LAB-Setup-
+<br />
+This lab was built to create a scalable and cloud-based Digital Forensics and Incident Response (DFIR) environment using AWS services. By following *Adam Messer’s* guide, I was able to configure a Windows forensic workstation and deploy Velociraptor for endpoint telemetry and threat hunting. This environment serves as the foundation for simulating realistic attack scenarios, collecting forensic evidence, and developing custom detection capabilities — all within a safe and isolated cloud setting.
 
+### Necessary Tools
+
+- AWS EC2 – Used to provision Windows and Linux instances for DFIR operations.
+- Velociraptor – Installed for endpoint visibility, artifact collection, and live threat hunting.
+- EZ Tools – A suite of forensic tools used to extract event logs and system data for offline analysis.
+- Sysmon – Installed on the Windows instance to generate detailed security logs.
+- Amazon S3 – Optional cloud storage for artifacts or logs.
+- Windows Server 2016/2019 – Used as the target system for testing and analysis.
+- Ubuntu Linux (SIFT or custom) – Used as the analyst workstation for interacting with Velociraptor and hosting files.
+- PuTTY – For remote SSH access to Linux systems from a local Windows host.
+- Visual Studio Code – To view and analyze logs and configuration files.
+  
 ## Workstation Setup
 
 **Create secure access to your AWS environment with SSO**
@@ -15,7 +29,7 @@ SIFT Key                   | Windows Key
 :-------------------------:|:-------------------------:
 <img width="500" alt="awskey" src="https://github.com/user-attachments/assets/d6efd606-c9dd-46b0-a0fe-000409ede3b8" /> | <img width="500" alt="awswkey" src="https://github.com/user-attachments/assets/15d29295-68f1-43b3-9cbf-af2b5e203327" />
 
-*Network*
+### Network
 - Adjust network settings on the SIFT machine to allow SSH from "My IP"
 - Adjust network settings on the Windows machine to allow RDP from "My IP"
 - Edit inbound Security Group rules > "All TCP" - (Add in a CIDR range that covers the two IPs in your EC2 instances’ VPC)
